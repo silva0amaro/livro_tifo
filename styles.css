@@ -333,3 +333,65 @@ footer {
   .hero-actions .btn, .event-actions .btn { width: 100%; }
   .footer-inner { flex-direction: column; }
 }
+
+/* Entidades parceiras na secção da apresentação */
+.event-card {
+  position: relative;
+  padding-bottom: 150px;
+}
+.event-partners {
+  position: absolute;
+  right: 0;
+  bottom: 18px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 10px;
+}
+.partners-title {
+  color: rgba(255,255,255,.72);
+  font-size: .68rem;
+  font-weight: 700;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+}
+.partners-logos {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 22px;
+  padding: 6px 0;
+}
+.partners-logos img {
+  display: block;
+  width: auto;
+  max-width: 230px;
+  object-fit: contain;
+  filter: drop-shadow(0 4px 10px rgba(20, 10, 8, .28));
+}
+.partners-logos img:nth-child(1) { height: 72px; }
+.partners-logos img:nth-child(2) { height: 64px; }
+.partners-logos img:nth-child(3) { height: 76px; }
+
+@media (max-width: 900px) {
+  .event-card { padding-bottom: 60px; }
+  .event-partners {
+    position: static;
+    margin-top: 46px;
+    align-items: center;
+  }
+  .partners-logos {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 560px) {
+  .partners-logos {
+    width: 100%;
+    gap: 18px;
+  }
+  .partners-logos img:nth-child(1) { height: 50px; }
+  .partners-logos img:nth-child(2) { height: 46px; }
+  .partners-logos img:nth-child(3) { height: 56px; }
+}
